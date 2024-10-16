@@ -452,6 +452,8 @@ const usages = {
         "0x0009000d": { 'name': 'Stadia', 'class': 'mouse' },
         "0x00090011": { 'name': 'Assistant', 'class': 'mouse' },
         "0x00090012": { 'name': 'Capture', 'class': 'mouse' },
+        "0x00090013": { 'name': 'Button 1', 'class': 'mouse' },
+        "0x00090014": { 'name': 'Button 2', 'class': 'mouse' },
     },
     5: {
         "0x00010030": { 'name': 'Left stick X', 'class': 'mouse' },
