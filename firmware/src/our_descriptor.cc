@@ -436,11 +436,12 @@ uint8_t const our_report_descriptor_stadia[] = {
     0x09, 0x0e,                    //   Usage (0x0e)
     0x09, 0x0f,                    //   Usage (0x0f)
     0x09, 0x14,                    //   Usage (0x14)
+    0x09, 0x36,                    //   Usage (0x15) changed to 36
     0x09, 0x16,                    //   Usage (0x16)
     0x09, 0x17,                    //   Usage (0x17)
     0x09, 0x18,                    //   Usage (0x18)
     0x09, 0x19,                    //   Usage (0x19)
-    0x09, 0x1a,                    //   Usage (0x1a)
+    0x09, 0x37,                    //   Usage (0x1a) changed to 37
     0x09, 0x1b,                    //   Usage (0x1b)
     0x09, 0x1c,                    //   Usage (0x1c)
     0x09, 0x1d,                    //   Usage (0x1d)
@@ -448,17 +449,17 @@ uint8_t const our_report_descriptor_stadia[] = {
     0x09, 0x1f,                    //   Usage (0x1f)
     0x09, 0x20,                    //   Usage (0x20)
     0x09, 0x21,                    //   Usage (0x21)
-    0x09, 0x22,                    //   Usage (0x22)
-    0x09, 0x23,                    //   Usage (0x23)
-    0x09, 0x24,                    //   Usage (0x24)
-    0x09, 0x25,                    //   Usage (0x25)
-    0x09, 0x26,                    //   Usage (0x26)
-    0x09, 0x27,                    //   Usage (0x27)
-    0x09, 0x28,                    //   Usage (0x28)
-    0x09, 0x29,                    //   Usage (0x29)
-    0x09, 0x2a,                    //   Usage (0x2a)
-    0x09, 0x2b,                    //   Usage (0x2b)
-    0x09, 0x2c,                    //   Usage (0x2c)
+    0x09, 0x38,                    //   Usage (0x22) changed to 38
+    0x09, 0x23,                    //   Usage (0x23) 
+    0x09, 0x24,                    //   Usage (0x24) 
+    0x09, 0x39,                    //   Usage (0x25) changed to 39
+    0x09, 0x3a,                    //   Usage (0x26) changed to 3a
+    0x09, 0x27,                    //   Usage (0x27)  
+    0x09, 0x3b,                    //   Usage (0x28) changed to 3b
+    0x09, 0x3c,                    //   Usage (0x29) changed to 3c
+    0x09, 0x3d,                    //   Usage (0x2a) changed to 3d
+    0x09, 0x3e,                    //   Usage (0x2b) changed to 3e
+    0x09, 0x3f,                    //   Usage (0x2c) changed to 3f
     0x81, 0x02,                    //   Input (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position)
     0x75, 0x01,                    //   Report Size (1)
     0x95, 0x01,                    //   Report Count (1)
