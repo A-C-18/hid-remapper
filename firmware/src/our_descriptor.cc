@@ -396,7 +396,7 @@ uint8_t const our_report_descriptor_ps4[] = {
 
 uint8_t const our_report_descriptor_stadia[] = {
     0x05, 0x01,                    // Usage Page (Generic Desktop Ctrls)
-    0x09, 0x05,                    // Usage (Game Pad)
+    0x09, 0x04,                    // Usage (Joystick)
     0xA1, 0x01,                    // Collection (Application)
     0x85, 0x03,                    //   Report ID (3)
     0x05, 0x01,                    //   Usage Page (Generic Desktop Ctrls)
