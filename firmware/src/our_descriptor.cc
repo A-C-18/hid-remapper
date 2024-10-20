@@ -424,9 +424,9 @@ uint8_t const our_report_descriptor_stadia[] = {
     0x09, 0x05,                    //   Usage (0x05)
     0x09, 0x06,                    //   Usage (0x06)
     0x09, 0x07,                    //   Usage (0x07)
-    0x09, 0x08,                    //   Usage (0x08)
-    0x09, 0x09,                    //   Usage (0x09)
-    0x09, 0x0a,                    //   Usage (0x0a)
+    0x09, 0x2f,                    //   Usage (0x08) changed to 2f
+    0x09, 0x2e,                    //   Usage (0x09) changed to 2e
+    0x09, 0x2d,                    //   Usage (0x0a) changed to 2d
     0x09, 0x0b,                    //   Usage (0x0b)
     0x09, 0x0c,                    //   Usage (0x0c)
     0x09, 0x0d,                    //   Usage (0x0d)
