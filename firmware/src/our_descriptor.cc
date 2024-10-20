@@ -522,7 +522,7 @@ uint8_t const our_report_descriptor_xac_compat[] = {
     0x15, 0x00,        //   Logical Minimum (0)
     0x26, 0xFF, 0x00,  //   Logical Maximum (255)
     0x75, 0x08,        //   Report Size (8)
-    0x95, 0x04,        //   Report Count (5)
+    0x95, 0x05,        //   Report Count (5)
     0x81, 0x02,        //   Input (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position)
     0x09, 0x39,        //   Usage (Hat switch)
     0x15, 0x00,        //   Logical Minimum (0)
