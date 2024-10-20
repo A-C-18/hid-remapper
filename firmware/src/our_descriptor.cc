@@ -559,6 +559,12 @@ uint8_t const our_report_descriptor_xac_compat[] = {
     0x75, 0x02,        //    Report Size (5)
     0x95, 0x01,        //    Report Count (1)
     0x81, 0x01,        //    Input (Cnst,Arr,Abs)
+    0x06, 0x0F, 0x00,              //   Usage Page (PID Page)
+    0x09, 0x97,                    //   Usage (0x97)
+    0x75, 0x0a,                    //   Report Size (10)
+    0x95, 0x02,                    //   Report Count (1)
+    0x27, 0x03, 0xFF, 0x00         //   Logical Maximum (1024)
+    0x91, 0x02,                    //   Output (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position,Non-volatile)
     0xC0,              // End Collection
 };
 
