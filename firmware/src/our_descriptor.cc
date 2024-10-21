@@ -416,52 +416,11 @@ uint8_t const our_report_descriptor_stadia[] = {
     0x15, 0x00,                    //   Logical Minimum (0)
     0x25, 0x01,                    //   Logical Maximum (1)
     0x75, 0x01,                    //   Report Size (1)
-    0x95, 0x1F,                    //   Report Count (39)
-    0x09, 0x01,                    //   Usage (0x01)
-    0x09, 0x02,                    //   Usage (0x02)
-    0x09, 0x03,                    //   Usage (0x03)
-    0x09, 0x04,                    //   Usage (0x04)
-    0x09, 0x05,                    //   Usage (0x05)
-    0x09, 0x06,                    //   Usage (0x06)
-    0x09, 0x07,                    //   Usage (0x07)
-    0x09, 0x08,                    //   Usage (0x08)
-    0x09, 0x09,                    //   Usage (0x09)
-    0x09, 0x0a,                    //   Usage (0x0a)
-    0x09, 0x2f,                    //   Usage (0x08) changed to 2f
-    0x09, 0x2e,                    //   Usage (0x09) changed to 2e
-    0x09, 0x2d,                    //   Usage (0x0a) changed to 2d
-    0x09, 0x0b,                    //   Usage (0x0b)
-    0x09, 0x0c,                    //   Usage (0x0c)
-    0x09, 0x0d,                    //   Usage (0x0d)
-    0x09, 0x0e,                    //   Usage (0x0e)
-    0x09, 0x0f,                    //   Usage (0x0f)
-    0x09, 0x14,                    //   Usage (0x14)
-    0x09, 0x36,                    //   Usage (0x15) changed to 36
-    0x09, 0x16,                    //   Usage (0x16)
-    0x09, 0x17,                    //   Usage (0x17)
-    0x09, 0x18,                    //   Usage (0x18)
-    0x09, 0x19,                    //   Usage (0x19)
-    0x09, 0x37,                    //   Usage (0x1a) changed to 37
-    0x09, 0x1b,                    //   Usage (0x1b)
-    0x09, 0x1c,                    //   Usage (0x1c)
-    0x09, 0x1d,                    //   Usage (0x1d)
-    0x09, 0x1e,                    //   Usage (0x1e)
-    0x09, 0x1f,                    //   Usage (0x1f)
-    0x09, 0x20,                    //   Usage (0x20)
-    0x09, 0x21,                    //   Usage (0x21)
-    0x09, 0x38,                    //   Usage (0x22) changed to 38
-    0x09, 0x23,                    //   Usage (0x23) 
-    0x09, 0x24,                    //   Usage (0x24) 
-    0x09, 0x39,                    //   Usage (0x25) changed to 39
-    0x09, 0x3a,                    //   Usage (0x26) changed to 3a
-    0x09, 0x27,                    //   Usage (0x27)  
-    0x09, 0x3b,                    //   Usage (0x28) changed to 3b
-    0x09, 0x3c,                    //   Usage (0x29) changed to 3c
-    0x09, 0x3d,                    //   Usage (0x2a) changed to 3d
-    0x09, 0x3e,                    //   Usage (0x2b) changed to 3e
-    0x09, 0x3f,                    //   Usage (0x2c) changed to 3f
+    0x95, 0x3c,                    //   Report Count (60)
+    0x19, 0x01,                    //   Usage Minimum (1)
+    0x29, 0x3c,                    //   Usage Maximum (60)
     0x81, 0x02,                    //   Input (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position)
-    0x75, 0x01,                    //   Report Size (1)
+    0x75, 0x01,                    //   Report Size (4)
     0x95, 0x01,                    //   Report Count (1)
     0x81, 0x01,                    //   Input (Const,Array,Abs,No Wrap,Linear,Preferred State,No Null Position)
     0x05, 0x01,                    //   Usage Page (Generic Desktop Ctrls)
@@ -521,11 +480,12 @@ uint8_t const our_report_descriptor_xac_compat[] = {
     0x09, 0x30,        //   Usage (X)
     0x09, 0x31,        //   Usage (Y)
     0x09, 0x32,        //   Usage (Z)
+    0x09, 0x33,        //   Usage (Rx)
     0x09, 0x35,        //   Usage (Rz)
     0x15, 0x00,        //   Logical Minimum (0)
     0x26, 0xFF, 0x00,  //   Logical Maximum (255)
     0x75, 0x08,        //   Report Size (8)
-    0x95, 0x04,        //   Report Count (4)
+    0x95, 0x04,        //   Report Count (5)
     0x81, 0x02,        //   Input (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position)
     0x09, 0x39,        //   Usage (Hat switch)
     0x15, 0x00,        //   Logical Minimum (0)
@@ -594,13 +554,13 @@ void ps4_clear_report(uint8_t* report, uint8_t report_id, uint16_t len) {
     report[4] = 0x08;
 }
 
-static const uint8_t stadia_neutral[] = { 0x08, 0x00, 0x00, 0x80, 0x80, 0x80, 0x80, 0x00, 0x00, 0x00 };
+static const uint8_t stadia_neutral[] = { 0x08, 0x00, 0x00, 0x80, 0x80, 0x80, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 
 void stadia_clear_report(uint8_t* report, uint8_t report_id, uint16_t len) {
     memcpy(report, stadia_neutral, sizeof(stadia_neutral));
 }
 
-static const uint8_t xac_compat_neutral[] = { 0x80, 0x80, 0x80, 0x80, 0x08, 0x00 };
+static const uint8_t xac_compat_neutral[] = { 0x80, 0x80, 0x80, 0x80, 0x08, 0x80, 0x00 };
 
 void xac_compat_clear_report(uint8_t* report, uint8_t report_id, uint16_t len) {
     memcpy(report, xac_compat_neutral, sizeof(xac_compat_neutral));
